@@ -1,16 +1,15 @@
 /* ProductAdmin.css */
 
 /* Container styling */
-div {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-  }
+
   
   /* Form styling */
   form {
     display: flex;
     flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
   }
   
   /* Label styling */
@@ -45,41 +44,3 @@ div {
     background-color: #84b586;
   }
 
-/* Footer */
-.footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(80, 115, 80);
-    padding: 20px;
-    color: white;
-  }
-  
-  .socialLinks {
-    display: flex;
-    gap: 3px;
-  }
-  
-  .socialLinks a img {
-    width: 30px; /* Adjust the size of social media icons */
-    height: 30px; /* Adjust the size of social media icons */
-  }
-  
-  .gmailIcon {
-    font-size: 24px;
-    margin-right: 10px;
-  }
-  
-  .contactInfo {
-    text-align: left;
-  }
-  
-  /* Add styles for the copyright text */
-  .copyrightText {
-    font-size: 14px;
-    opacity: 0.8;
-    margin-top: 10px;
-    text-align: right;
-  }
-    
