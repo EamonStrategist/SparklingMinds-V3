@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { create } from "./api-adminproduct.js";
+import { Link } from "react-router-dom";
 import "./ProductAdmin.css"; // Import the CSS file
+
+
 const ProductAdmin = () => {
   const [open, setOpen] = useState(false);
 
@@ -38,6 +41,47 @@ const ProductAdmin = () => {
   };
 
   return (
+<div>
+{/* Render the navbar */}
+<div className="navbar">
+<Link to="/" className="link">
+  Home
+</Link>{' '}
+|{' '}
+<Link to="/users" className="link">
+  USERS
+</Link>{' '}
+|{' '}
+<Link to="/signup" className="link">
+  SIGNUP
+</Link>{' '}
+|{' '}
+<Link to="/signin" className="link">
+  SIGNIN
+</Link>{' '}
+|{' '}
+<Link to="/" className="link">
+  Sign-out
+</Link>{' '}
+|{' '}
+<Link to="/about" className="link">
+  About
+</Link>{' '}
+|{' '}
+<Link to="/products" className="link">
+  Products
+</Link>{' '}
+|{' '}
+<Link to="/contact" className="link">
+  Contact
+</Link>{' '}
+|{' '}
+<Link to="/admin" className="link">
+  Admin
+</Link>
+</div>
+
+
     <div>
       <h1>ProductAdmin</h1>
       <form>
@@ -160,7 +204,7 @@ const ProductAdmin = () => {
         </div>
       </footer>
     </div>
-    
+    </div>
   );
 };
 
