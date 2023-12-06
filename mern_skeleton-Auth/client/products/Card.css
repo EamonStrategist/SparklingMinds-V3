@@ -1,33 +1,42 @@
 .card {
-    border: 1px solid black;
-    width: 33%;
-  }
-  .card h3,
-  .card h4,
-  .card p {
-    margin: 5px 0;
-    color: #333;
-  }
+  border: 1px solid black;
+  width: 50%; /* Adjust the width as needed and consider margin */
+/* Add margin to create space between cards */
+margin: 10px auto;
+}
+.card h3,
+.card h4,
+.card p {
+  margin: 5px 10px;
+  color: #333;
   
-  .card h3 {
-    font-size: 1.5rem;
-  }
-  
-  .card h4 {
-    font-size: 1.2rem;
-  }
-  
-  .card p {
-    font-size: 1rem;
-  }
-  
-  .card > img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ccc;
-  }
-  .card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
-  }
-  
+}
+
+.card h3 {
+  font-size: 1.5rem;
+}
+
+.card h4 {
+  font-size: 1.2rem;
+}
+
+.card p {
+  font-size: 1rem;
+}
+
+.card > img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+}
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+.card {
+  width: calc(50% - 20px); /* Make cards take 50% of the width on smaller screens */
+}
+}
