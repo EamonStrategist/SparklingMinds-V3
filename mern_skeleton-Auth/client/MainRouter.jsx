@@ -10,6 +10,7 @@ import About from './about/About';
 import ProductsPage from './products/ProductsPage';
 import Contact from './contact/Contact';
 import TestPage from './user/TestPage';
+import Cart from './cart/Cart';
 
 const MainRouter = () => {
 return ( <div> 
@@ -24,6 +25,7 @@ return ( <div>
 <Route exact path="/products" element={<ProductsPage/>}/>
 <Route exact path="/contact" element={<Contact/>}/>
 <Route exact path="/testpage" element={<TestPage/>}/>
+<Route exact path="/cart" element={<Cart/>}/>
 
 </Routes>
 </div> 

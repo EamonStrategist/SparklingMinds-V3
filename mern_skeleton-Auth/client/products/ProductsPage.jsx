@@ -37,12 +37,17 @@ const ProductsPage = () => {
 */
 
 
+
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [cart, setCart] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+
+  var cartList = [];
+
+
   
   useEffect(() => {
     setLoading(true);
@@ -80,6 +85,19 @@ const ProductsPage = () => {
     }
   };
   const addToCart = (product) => {
+
+    
+    
+    
+    if(localStorage.getItem("Product: " + product.name) == null){
+    localStorage.setItem("Product: " + product.name, product.price);
+    localStorage.setItem("Quantity: " + product.name, 1);
+    }else{
+      let quantityLocal = parseInt(localStorage.getItem("Quantity: " + product.name));
+      localStorage.setItem("Quantity: " + product.name, ++quantityLocal);
+    }
+    // https://stackoverflow.com/questions/55328748/how-to-store-and-retrieve-shopping-cart-items-in-localstorage
+
     setCart((currentCart) => {
       const cartItem = currentCart.find((item) => item.id === product.id);
       if (cartItem) {
@@ -103,8 +121,9 @@ const ProductsPage = () => {
           categories={categories}
           onCategoryChange={handleCategoryChange}
         />
-        <div className="cart-summary">
+        <div className="cart-summary"><a href= "./cart">
           Cart ({cart.reduce((acc, item) => acc + item.quantity, 0)})
+          </a>
         </div>
       </div>
       <ProductContainer>
