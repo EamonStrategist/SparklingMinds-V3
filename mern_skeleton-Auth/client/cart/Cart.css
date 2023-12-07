@@ -1,0 +1,32 @@
+.cart-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #bba1a1;
+    border-radius: 8px;
+    background-color: #e6cfcf;
+    box-shadow: 0 0 10px rgba(152, 142, 142, 0.1);
+  }
+  
+  h2 {
+    color: rgb(41, 80, 41);
+    text-align: center;
+  }
+  
+  .cart-items {
+    margin-top: 15px;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  
+  .item-key {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .item-value {
+    color: #007bff; /* Change the color as needed */
+  }
