@@ -169,21 +169,21 @@ const ProductAdmin = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/images/instagram.jpg" alt="Instagram" />
+            <img src="./assets/images/instagram.jpg" alt="Instagram" />
           </a>
           <a
             href="https://www.twitter.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/images/twitter.jpg" alt="twitter" />
+            <img src="./assets/images/twitter.jpg" alt="twitter" />
           </a>
           <a
             href="https://www.facebook.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/images/facebook.png" alt="Facebook" />
+            <img src="./assets/images/facebook.png" alt="Facebook" />
           </a>
         </div>
         {/* Gmail icon for more info */}
