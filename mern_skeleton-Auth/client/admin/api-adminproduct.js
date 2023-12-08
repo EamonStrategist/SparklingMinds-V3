@@ -1,4 +1,4 @@
-let apiURL = "http://localhost:3000";
+let apiURL = "http://localhost:10000";
 
 const create = async (product) => {
     try {

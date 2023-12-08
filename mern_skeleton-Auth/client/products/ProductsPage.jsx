@@ -47,7 +47,7 @@ const ProductsPage = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch("http://localhost:3000/api/products/")
+    fetch("http://localhost:10000/api/products/")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
