@@ -35,9 +35,9 @@ const CURRENT_WORKING_DIR = process.cwd();
 app.use(cors());
 app.options("http://localhost:5173", cors());
 //...
-app.get("/", (req, res) => {
-  res.status(200).send(Template());
-});
+//app.get("/", (req, res) => {
+//  res.status(200).send(Template());
+//});
 //...
 app.use(express.static(path.join(CURRENT_WORKING_DIR, "dist/app")));
 app.use(express.json());
@@ -48,6 +48,10 @@ app.use("/", productRoutes);
 app.use("/", adminProductsRoutes);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.get("/", (req, res) =>{
+  res.status(200).sendFile(path.join(_dirname, '/index.html'));
+
+});
 app.use(cookieParser());
 app.use(compress());
 app.use(helmet());
