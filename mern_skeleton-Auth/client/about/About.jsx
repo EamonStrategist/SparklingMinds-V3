@@ -3,10 +3,10 @@ import "./About.css";
 
 const About = () => {
   const images = [
-    "/images/pexels-ari-roberts-9649448.jpg",
-    "/images/pexels-castorly-stock-3641056.jpg",
-    "/images/pendants (2).jpg",
-    "/images/necklaces (2).jpg",
+    "./assets/images/pexels-ari-roberts-9649448.jpg",
+    "./assets/images/pexels-castorly-stock-3641056.jpg",
+    "./assets/images/pendants (2).jpg",
+    "./assets/images/necklaces (2).jpg",
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -51,32 +51,32 @@ const About = () => {
         <h2>EXPLORE BY CATEGORY</h2>
         <div className="category-images">
           <a href="/earrings">
-            <img src="/images/earrings.jpg" alt="Earrings" />
+            <img src="./assets/images/earrings.jpg" alt="Earrings" />
           </a>
           <a href="/necklaces">
-            <img src="/images/necklaces.jpg" alt="Necklaces" />
+            <img src="./assets/images/necklaces.jpg" alt="Necklaces" />
           </a>
           <a href="/rings">
-            <img src="/images/rings.jpg" alt="Rings" />
+            <img src="./assets/images/rings.jpg" alt="Rings" />
           </a>
           <a href="/bracelets">
-            <img src="/images/bracelets (2).jpg" alt="Bracelets" />
+            <img src="./assets/images/bracelets (2).jpg" alt="Bracelets" />
           </a>
           <a href="/bracelets">
             <img
-              src="/images/pexels-kristina-paukshtite-885218.jpg"
+              src="./assets/images/pexels-kristina-paukshtite-885218.jpg"
               alt="Different Bracelet"
             />
           </a>
 
           <a href="/pendants">
-            <img src="/images/pendants.jpg" alt="Pendants" />
+            <img src="./assets/images/pendants.jpg" alt="Pendants" />
           </a>
           <a href="/pendants">
-            <img src="/images/earrings (2).jpg" alt="Pendants" />
+            <img src="./assets/images/earrings (2).jpg" alt="Pendants" />
           </a>
           <a href="/pendants">
-            <img src="/images/necklaces (2).jpg" alt="Pendants" />
+            <img src="./assets/images/necklaces (2).jpg" alt="Pendants" />
           </a>
         </div>
       </div>

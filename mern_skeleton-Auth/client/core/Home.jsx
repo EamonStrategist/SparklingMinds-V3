@@ -174,7 +174,7 @@ const Home = () => {
         <div className={classes.videoContainer}>
         <video className={classes.video} controls>
           <source
-            src="\images\pexels-tima-miroshnichenko-6263177 (2160p).mp4"
+            src="./assets\images\pexels-tima-miroshnichenko-6263177 (2160p).mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.
