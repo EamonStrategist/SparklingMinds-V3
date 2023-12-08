@@ -19,15 +19,30 @@ const Cart = () => {
   return (
     <div className="cart-container">
       <h2>Your Shopping Cart</h2>
-      <div className="cart-items">
-        {Object.entries(localStorageData).map(([key, value]) => (
-          <div key={key} className="cart-item">
-            <span className="item-key">{key}:</span>
-            <span className="item-value">{value}</span>
-     
-          </div>
-        ))}
-      </div>
+      <table className="cart-table">
+        <thead>
+          <tr>
+            <th>Item Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          {Object.entries(localStorageData).map(([key, value]) => {
+            const isProduct = key.includes("Product");
+            const itemName = key.replace("Product: ", "");
+            const formattedValue = isProduct ? `$${value}` : value;
+
+            return (
+              <tr key={key} className="cart-item">
+                <td>{itemName}</td>
+                <td>{isProduct ? "1" : value}</td>
+                <td>{isProduct ? value : ""}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
     </div>
   );
 };

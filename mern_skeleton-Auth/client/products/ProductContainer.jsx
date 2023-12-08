@@ -1,5 +1,5 @@
 import React from "react";
-import "./ProductContainer";
+import "./ProductContainer.css";
 
 const ProductContainer = (props) => {
   return <div className="item-container">{props.children};</div>;
