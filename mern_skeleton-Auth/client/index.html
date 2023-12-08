@@ -9,11 +9,14 @@
   <body>
     <div id="root">Sparkling Minds</div>
     <script type="module">
-      import RefreshRuntime from "http://localhost:5173/@react-refresh";
+      if(process.env.NODE_ENV !== 'production' && typeof window !== 'undefined'){
+      //import RefreshRuntime from "http://localhost:5173/@react-refresh";
+      const RefreshRuntime = require('react-refresh/runtime');
       RefreshRuntime.injectIntoGlobalHook(window);
       window.$RefreshReg$ = () => {};
       window.$RefreshSig$ = () => (type) => type;
       window.__vite_plugin_react_preamble_installed__ = true;
+    }
     </script>
     <script type="module" src="./src/main.jsx"></script>
   </body>
